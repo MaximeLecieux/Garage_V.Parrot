@@ -151,6 +151,69 @@
                 <a class="btn btn-lg my-5" href="#">Voir toutes nos offres</a>
             </div>
         </section>
+        <section>
+            <div class="text-center">
+                <h2 class="m-5">Ils nous ont fait confiance</h2>
+
+                <div id="carouselCommentary" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex border-bottom mb-2 pb-2">
+                                <div class="p-2 me-auto">
+                                    <span>Maxime LECIEUX</span>
+                                </div>
+                                <div class="p-2">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>Ceci est un commentaire positif</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex border-bottom mb-2 pb-2">
+                                <div class="p-2 me-auto">
+                                    <span>Camille MATHIEU</span>
+                                </div>
+                                <div class="p-2">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>Ceci est un commentaire positif</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex border-bottom mb-2 pb-2">
+                                <div class="p-2 me-auto">
+                                    <span>Dominique BAILLY</span>
+                                </div>
+                                <div class="p-2">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                    <img src="assets/images/star.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>Ceci est un commentaire positif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <a class="btn btn-lg my-5" href="#">Laisser nous un commentaire</a>
+            </div>
+        </section>
+
 
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
