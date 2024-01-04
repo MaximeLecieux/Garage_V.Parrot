@@ -1,6 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rajdhani:wght@600&display=swap');
+
+
+/** Basic style **/
 body{
     margin: 0;
 }
+
+h1{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+h2{
+    font-family: 'Barlow', sans-serif;
+}
+
+p{
+    font-family: 'Barlow', sans-serif;
+}
+
+a{
+    color: #D92332;
+}
+
+.btn{
+    background: #262526;
+    color: white;
+    
+}
+
+.btn:hover{
+    border: solid 2px #262526;
+}
+
+/** End **/
 
 .first-section{
     width: 100%;
