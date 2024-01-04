@@ -4,6 +4,7 @@
 /** Basic style **/
 body{
     margin: 0;
+    background: #F2F2F2;
 }
 
 h1{
@@ -12,6 +13,7 @@ h1{
 
 h2{
     font-family: 'Barlow', sans-serif;
+    color: #D94350;
 }
 
 p{

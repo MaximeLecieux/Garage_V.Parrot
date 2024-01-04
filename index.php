@@ -25,11 +25,11 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item m-2"><a href="#" class="nav-link">Accueil</a></li>
-                                <li class="nav-item m-2"><a href="#" class="nav-link">Services</a></li>
-                                <li class="nav-item m-2"><a href="#" class="nav-link">Horaires</a></li>
-                                <li class="nav-item m-2"><a href="#" class="nav-link">Véhicules</a></li>
-                                <li class="nav-item m-2"><a href="#" class="nav-link">Connexion</a></li>
+                                <li class="nav-item m-2"><a href="#">Accueil</a></li>
+                                <li class="nav-item m-2"><a href="#services">Services</a></li>
+                                <li class="nav-item m-2"><a href="#">Horaires</a></li>
+                                <li class="nav-item m-2"><a href="#">Véhicules</a></li>
+                                <li class="nav-item m-2"><a href="#">Connexion</a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,9 +44,14 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="services">
             <div class="text-center">
                 <h2 class="m-5">Nos services</h2>
+                <div class="mb-5">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
+                    </p>
+                </div>
                 <div class="row justify-content-center m-0">
                     <div class="col-lg-3 col-md-4 mx-2 my-2">
                         <div class="card">
@@ -54,7 +59,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/1.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Entretient du véhicule</h4>
+                                <h3 class="card-title center">Entretient du véhicule</h3>
                                 <p class="card-text">
                                 Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.    </p>
                             </div>
@@ -66,7 +71,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/2.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Service du nettoyage</h4>
+                                <h3 class="card-title center">Service du nettoyage</h3>
                                 <p class="card-text">
                                 Notre équipe vous proportionne un service de qualité pour le nettoyage votre voiture.    </p>
                             </div>
@@ -78,7 +83,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/3.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Contrôle technique</h4>
+                                <h3 class="card-title center">Contrôle technique</h3>
                                 <p class="card-text">
                                 Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture.    </p>
                             </div>
@@ -102,7 +107,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/mercedes.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Véhicule 1</h4>
+                                <h3 class="card-title center">Véhicule 1</h3>
                                 <p class="card-text">Model</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Année de mise en circulation</li>
@@ -119,7 +124,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/ferrari.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Véhicule 2</h4>
+                                <h3 class="card-title center">Véhicule 2</h3>
                                 <p class="card-text">Model</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Année de mise en circulation</li>
@@ -136,7 +141,7 @@
                                 <img class="card-img-top img-service" src="uploads/images/audi.jpg" alt="Changement de pneu">
                             </div>
                             <div class="card-body ">
-                                <h4 class="card-title center">Véhicule 3</h4>
+                                <h3 class="card-title center">Véhicule 3</h3>
                                 <p class="card-text">Model</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Année de mise en circulation</li>
@@ -217,11 +222,11 @@
 
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item m-2"><a href="#" class="nav-link">Accueil</a></li>
-                <li class="nav-item m-2"><a href="#" class="nav-link">Services</a></li>
-                <li class="nav-item m-2"><a href="#" class="nav-link">Horaires</a></li>
-                <li class="nav-item m-2"><a href="#" class="nav-link">Véhicules</a></li>
-                <li class="nav-item m-2"><a href="#" class="nav-link">Connexion</a></li>
+                <li class="nav-item m-2"><a href="#">Accueil</a></li>
+                <li class="nav-item m-2"><a href="#">Services</a></li>
+                <li class="nav-item m-2"><a href="#">Horaires</a></li>
+                <li class="nav-item m-2"><a href="#">Véhicules</a></li>
+                <li class="nav-item m-2"><a href="#">Connexion</a></li>
             </ul>
             <p class="text-center text-body-secondary">© 2024 Garage V.Parrot, Inc</p>
         </footer>
