@@ -44,6 +44,49 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="text-center">
+                <h2 class="m-5">Nos services</h2>
+                <div class="row justify-content-center m-0">
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/1.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Entretient du véhicule</h4>
+                                <p class="card-text">
+                                Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/2.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Service du nettoyage</h4>
+                                <p class="card-text">
+                                Notre équipe vous proportionne un service de qualité pour le nettoyage votre voiture.    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/3.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Contrôle technique</h4>
+                                <p class="card-text">
+                                Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture.    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item m-2"><a href="#" class="nav-link">Accueil</a></li>
