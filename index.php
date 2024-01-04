@@ -87,6 +87,71 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="text-center">
+                <h2 class="m-5">Nos voitures d'occasion</h2>
+                <div class="mb-5">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
+                    </p>
+                </div>
+                <div class="row justify-content-center m-0">
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/mercedes.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Véhicule 1</h4>
+                                <p class="card-text">Model</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Année de mise en circulation</li>
+                                    <li class="list-group-item">Kilométrage</li>
+                                    <li class="list-group-item">Prix</li>
+                                </ul>
+                                <a href="#" class="btn mt-2">Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/ferrari.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Véhicule 2</h4>
+                                <p class="card-text">Model</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Année de mise en circulation</li>
+                                    <li class="list-group-item">Kilométrage</li>
+                                    <li class="list-group-item">Prix</li>
+                                </ul>
+                                <a href="#" class="btn mt-2">Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img-top img-service" src="uploads/images/audi.jpg" alt="Changement de pneu">
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title center">Véhicule 3</h4>
+                                <p class="card-text">Model</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Année de mise en circulation</li>
+                                    <li class="list-group-item">Kilométrage</li>
+                                    <li class="list-group-item">Prix</li>
+                                </ul>
+                                <a href="#" class="btn mt-2">Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-lg my-5" href="#">Voir toutes nos offres</a>
+            </div>
+        </section>
+
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item m-2"><a href="#" class="nav-link">Accueil</a></li>
