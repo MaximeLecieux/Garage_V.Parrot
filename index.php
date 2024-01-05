@@ -162,7 +162,7 @@
 
                 <div id="carouselCommentary" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-bs-interval="4000">
                             <div class="d-flex border-bottom mb-2 pb-2">
                                 <div class="p-2 me-auto">
                                     <span>Maxime LECIEUX</span>
@@ -179,7 +179,7 @@
                                 <p>Ceci est un commentaire positif</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="4000">
                             <div class="d-flex border-bottom mb-2 pb-2">
                                 <div class="p-2 me-auto">
                                     <span>Camille MATHIEU</span>
@@ -194,7 +194,7 @@
                                 <p>Ceci est un commentaire positif</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="4000">
                             <div class="d-flex border-bottom mb-2 pb-2">
                                 <div class="p-2 me-auto">
                                     <span>Dominique BAILLY</span>
