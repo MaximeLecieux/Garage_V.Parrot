@@ -2,9 +2,11 @@
 require_once('templates/header.php');
 
 require_once('App/lib/getServices.php');
+require_once('App/lib/getOpinions.php');
 
 $services = getServices($pdo);
-var_dump($services);
+$opinions = getOpinions($pdo);
+
 ?>
         <section class="position-relative first-section">
             <div class="px-4 py-5 text-center position-absolute top-50 start-50 translate-middle text-white">
@@ -23,7 +25,7 @@ var_dump($services);
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
-                    <?php foreach($services as $service) {?>
+                    <?php foreach($services as $service) { //Services get from database?>
                     <div class="col-lg-3 col-md-4 mx-2 my-2">
                         <div class="card">
                             <div class="card-header">
@@ -128,42 +130,25 @@ var_dump($services);
                                 <p>Ceci est un commentaire positif</p>
                             </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="4000">
-                            <div class="d-flex border-bottom mb-2 pb-2">
-                                <div class="p-2 me-auto">
-                                    <span>Camille MATHIEU</span>
+                        <?php foreach($opinions as $opinion) { //Opinions get from database?>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <div class="d-flex border-bottom mb-2 pb-2">
+                                    <div class="p-2 me-auto">
+                                        <span><?=$opinion['name']?></span>
+                                    </div>
+                                    <div class="p-2">
+                                        <?php for($i=0; $i< $opinion['note']; $i++ ){?>
+                                        <img src="assets/images/star.svg" alt="note">
+                                        <?php }?>
+                                    </div>
                                 </div>
-                                <div class="p-2">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
-                                </div>
-                            </div>
-                            <div>
-                                <p>Ceci est un commentaire positif</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="4000">
-                            <div class="d-flex border-bottom mb-2 pb-2">
-                                <div class="p-2 me-auto">
-                                    <span>Dominique BAILLY</span>
-                                </div>
-                                <div class="p-2">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
-                                    <img src="assets/images/star.svg" alt="">
+                                <div>
+                                    <p><?=$opinion['commentary']?></p>
                                 </div>
                             </div>
-                            <div>
-                                <p>Ceci est un commentaire positif</p>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-
-
                 <a class="btn btn-lg my-5" href="#">Laisser nous un commentaire</a>
             </div>
         </section>
