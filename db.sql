@@ -19,7 +19,8 @@ CREATE TABLE Services (
 );
 
 CREATE TABLE Schedules (
-    day varchar(50) NOT NULL PRIMARY KEY,
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    day varchar(50) NOT NULL,
     morning varchar(50) NOT NULL,
     afternoon varchar(50) NOT NULL
 );
