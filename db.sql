@@ -2,7 +2,7 @@ CREATE DATABASE garage;
 
 USE garage;
 
-CREATE USER 'Administrateur'@'localhost' IDENTIFIED BY '$2y$10$Z9XPXXm5K7qOzh3VhTszeuPVb.BGjRQdBr2O7C8gozyU7CsZIIUDK';
+CREATE USER 'Administrateur'@'localhost' IDENTIFIED BY 'Password123!';
 
 CREATE TABLE Users (
     idUser int NOT NULL AUTO_INCREMENT PRIMARY KEY,
