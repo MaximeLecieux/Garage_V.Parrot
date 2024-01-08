@@ -1,5 +1,10 @@
 <?php
 require_once('templates/header.php');
+
+require_once('App/lib/getServices.php');
+
+$services = getServices($pdo);
+var_dump($services);
 ?>
         <section class="position-relative first-section">
             <div class="px-4 py-5 text-center position-absolute top-50 start-50 translate-middle text-white">
@@ -18,42 +23,21 @@ require_once('templates/header.php');
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
+                    <?php foreach($services as $service) {?>
                     <div class="col-lg-3 col-md-4 mx-2 my-2">
                         <div class="card">
                             <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/1.jpg" alt="Changement de pneu">
+                                <img class="card-img-top img-service" src="<?=$service['img']?>" alt="<?=$service['name']?>">
                             </div>
                             <div class="card-body ">
-                                <h3 class="card-title center">Entretient du véhicule</h3>
+                                <h3 class="card-title center"><?=$service['name']?></h3>
                                 <p class="card-text">
-                                Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.    </p>
+                                    <?=$service['description']?>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/2.jpg" alt="Changement de pneu">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center">Service du nettoyage</h3>
-                                <p class="card-text">
-                                Notre équipe vous proportionne un service de qualité pour le nettoyage votre voiture.    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/3.jpg" alt="Changement de pneu">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center">Contrôle technique</h3>
-                                <p class="card-text">
-                                Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture.    </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
