@@ -1,16 +1,18 @@
+<?php
+require_once('App/lib/getSchedules.php');
+
+$schedules = getSchedules($pdo);
+?>
+
 <footer class="py-3 my-4">
             <div class="row text-center">
                 <div class="col-lg-6">
                     <h2 class="m-5">Horaires d'ouvertures</h2>
                     <div>
                         <ul>
-                            <li class="mb-2">Lundi : 8:00-12:00 , 14:00-18:00</li>
-                            <li class="mb-2">Mardi : 8:00-12:00 , 14:00-18:00</li>
-                            <li class="mb-2">Mercredi : 8:00-12:00 , 14:00-18:00</li>
-                            <li class="mb-2">Jeudi : 8:00-12:00 , 14:00-18:00</li>
-                            <li class="mb-2">Vendredi : 8:00-12:00 , 14:00-18:00</li>
-                            <li class="mb-2">Samedi : 8:00-12:00 , Fermé</li>
-                            <li class="mb-2">Dimanche : Fermé , Fermé</li>
+                            <?php foreach($schedules as $horaire){ //?>
+                                <li class="mb-2"><?=$horaire['day']?> : <?=$horaire['morning']?> , <?=$horaire['afternoon']?></li>
+                            <?php }?>
                         </ul>
                     </div>
                 </div>
