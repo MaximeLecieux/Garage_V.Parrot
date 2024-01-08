@@ -40,6 +40,8 @@ li{
 
 /** End **/
 
+/** Index.html  **/
+
 .first-section{
     width: 100%;
     height: 90vh;
@@ -59,3 +61,5 @@ li{
     max-width: 500px;
     margin: 20px auto 0;
 }
+
+/** End **/
