@@ -25,9 +25,9 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item m-2"><a href="#">Accueil</a></li>
-                                <li class="nav-item m-2"><a href="#services">Services</a></li>
-                                <li class="nav-item m-2"><a href="#">Horaires</a></li>
+                                <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
+                                <li class="nav-item m-2"><a href="index.php#services">Services</a></li>
+                                <li class="nav-item m-2"><a href="#schedules">Horaires</a></li>
                                 <li class="nav-item m-2"><a href="#">Véhicules</a></li>
                                 <li class="nav-item m-2"><a href="#">Connexion</a></li>
                             </ul>

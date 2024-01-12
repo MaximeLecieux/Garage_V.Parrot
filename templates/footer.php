@@ -6,7 +6,7 @@ $schedules = getSchedules($pdo);
 
 <footer class="py-3 my-4">
             <div class="row text-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="schedules">
                     <h2 class="m-5">Horaires d'ouvertures</h2>
                     <div>
                         <ul>
@@ -31,7 +31,7 @@ $schedules = getSchedules($pdo);
                 </div>
             </div>
             <ul class="nav justify-content-center border-bottom py-3 my-3">
-                <li class="nav-item m-2"><a href="#">Accueil</a></li>
+                <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
                 <li class="nav-item m-2"><a href="#">Véhicules</a></li>
                 <li class="nav-item m-2"><a href="#">Connexion</a></li>
             </ul>
