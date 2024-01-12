@@ -149,7 +149,7 @@ $opinions = getOpinions($pdo);
                         <?php } ?>
                     </div>
                 </div>
-                <a class="btn btn-lg my-5" href="#">Laisser nous un commentaire</a>
+                <a class="btn btn-lg my-5" href="commentary.php">Laisser nous un commentaire</a>
             </div>
         </section>
 
