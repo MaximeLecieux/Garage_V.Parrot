@@ -1,13 +1,24 @@
 <?php
 require_once('templates/header.php');
+require_once('App/lib/verifyUser.php');
+
+    $errors = [];
+
+    if (isset($_POST['loginUser'])) {
+
+        $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
+
+        if ($user) {
+            $_SESSION['user'] = ['email' => $user['email']];
+            header('location: index.php');
+        } else {
+            $errors[] = 'Email ou mot de passe incorrect';
+        }
+
+    }
 ?>
 
 <div class="text-center">
-    <?php foreach ($messages as $message) { ?>
-        <div class="alert alert-success">
-            <?=$message; ?>
-        </div>
-    <?php } ?>
 
     <?php foreach ($errors as $error) { ?>
         <div class="alert alert-danger">
@@ -27,7 +38,7 @@ require_once('templates/header.php');
                 <label for="password" class="form-label">Mot de passe</label>
                 <input type="password" class="form-control" name="password" id="password" required>            
             </div>
-            <button type="submit" name="connexion" class="btn btn-lg my-5"> Se connecter </button>
+            <button type="submit" name="loginUser" class="btn btn-lg my-5"> Se connecter </button>
         </form>
     </div>
 </div>
