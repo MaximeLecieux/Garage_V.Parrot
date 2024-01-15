@@ -29,7 +29,7 @@
                                 <li class="nav-item m-2"><a href="index.php#services">Services</a></li>
                                 <li class="nav-item m-2"><a href="#schedules">Horaires</a></li>
                                 <li class="nav-item m-2"><a href="#">Véhicules</a></li>
-                                <li class="nav-item m-2"><a href="#">Connexion</a></li>
+                                <li class="nav-item m-2"><a href="connexion.php">Connexion</a></li>
                             </ul>
                         </div>
                     </div>
