@@ -12,7 +12,7 @@
         <header>
             <nav class="navbar navbar-expand-md border-bottom">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.php">
                         <img src="assets/images/logo.svg" width="200" alt="Logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

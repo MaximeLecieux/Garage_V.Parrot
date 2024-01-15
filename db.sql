@@ -38,8 +38,7 @@ CREATE TABLE Opinions (
     commentary varchar(255) NOT NULL,
     note varchar(50) NOT NULL,
     status varchar(50) NOT NULL,
-    id_guest int NOT NULL,
-    FOREIGN KEY (id_guest) REFERENCES Guests(idGuest)
+    name varchar(50)
 );
 
 CREATE TABLE Cars (
@@ -88,17 +87,11 @@ INSERT INTO Services (name, description, img) VALUES ('Service du nettoyage', "N
 
 INSERT INTO Services (name, description, img) VALUES ('Contrôle technique', "Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture. ", 'uploads/images/3.jpg');
 
-INSERT INTO Guests (name) VALUES ('Maxime');
+INSERT INTO Opinions (commentary, note, status, name)  VALUES ("De loin les meilleurs ! Service qualité prix au top ne changez rien ! Je recommande !!", 5, 'valid', 'LECIEUX');
 
-INSERT INTO Guests (name) VALUES ('Dominique');
+INSERT INTO Opinions (commentary, note, status, name)  VALUES ("J’avais confiance en aucun garage avant celui là je vous le recommande fortement!", 5, 'valid', 'MATHIEU');
 
-INSERT INTO Guests (name) VALUES ('Camille');
-
-INSERT INTO Opinions (commentary, note, status, id_guest)  VALUES ("De loin les meilleurs ! Service qualité prix au top ne changez rien ! Je recommande !!", 5, 'valid', 1);
-
-INSERT INTO Opinions (commentary, note, status, id_guest)  VALUES ("J’avais confiance en aucun garage avant celui là je vous le recommande fortement!", 5, 'valid', 2);
-
-INSERT INTO Opinions (commentary, note, status, id_guest)  VALUES ("Compétent, professionnel,bon prix et très disponible", 4, 'valid', 3);
+INSERT INTO Opinions (commentary, note, status, name)  VALUES ("Compétent, professionnel,bon prix et très disponible", 4, 'valid', 'BAILLY');
 
 
 INSERT INTO Schedules (day, morning, afternoon) VALUES ('Lundi', '8:00-12:00', '14:00-18:00');
