@@ -31,7 +31,7 @@ a{
 }
 
 .btn:hover{
-    border: solid 2px #262526;
+    border: solid 1px #262526;
 }
 
 li{
@@ -63,3 +63,12 @@ li{
 }
 
 /** End **/
+
+/** Administration panel **/
+
+.administration-panel{
+    background-color: #e0e1dd;
+    border: 2px solid;
+    border-radius: 15px;
+    padding : 25px;
+}

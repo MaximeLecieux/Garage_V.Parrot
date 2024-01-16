@@ -1,8 +1,14 @@
 <?php
 require_once('pdo.php');
 
-function getOpinions(PDO $pdo){
+function getValidsOpinions(PDO $pdo){
     $query = $pdo->prepare("SELECT commentary, note, name FROM Opinions WHERE status = 'valid';");
+    $query->execute();
+    return $query->fetchAll();
+}
+
+function getPendingOpinions(PDO $pdo){
+    $query = $pdo->prepare("SELECT * FROM Opinions WHERE status = 'pending';");
     $query->execute();
     return $query->fetchAll();
 }

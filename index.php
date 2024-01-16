@@ -5,7 +5,7 @@ require_once('App/lib/getServices.php');
 require_once('App/lib/getOpinions.php');
 
 $services = getServices($pdo);
-$opinions = getOpinions($pdo);
+$opinions = getValidsOpinions($pdo);
 
 ?>
         <section class="position-relative first-section">
