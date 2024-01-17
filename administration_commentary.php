@@ -3,6 +3,7 @@ require_once('templates/header.php');
 require_once('App/lib/getOpinions.php');
 require_once('App/lib/deleteOpinion.php');
 require_once('App/lib/validateOpinion.php');
+require_once('App/lib/addOpinion.php');
 
 $errors = [];
 $messages = [];
@@ -25,6 +26,16 @@ if(isset($_POST['validateCommentary'])){
 
     if($validateOpinion){
         $messages[] = 'Le commentaire a bien été validé';
+    } else {
+        $errors[] = 'Une erreur s\'est produite';
+    }
+}
+
+if(isset($_POST['addOpinion'])){
+    $addOpinion = addOpinion($pdo, $_POST['commentary'], $_POST['note'], 'pending', $_POST['name']);
+
+    if($addOpinion){
+        $messages[] = 'Le commentaire a bien été ajouté';
     } else {
         $errors[] = 'Une erreur s\'est produite';
     }
@@ -126,10 +137,32 @@ if(isset($_POST['validateCommentary'])){
             </table>
         </form>
         <?php } ?>
-    </div>
-    </div>
 
-    
+        <h3 class="m-5">Ajouter un commentaire</h3>
+        <div class="m-5">
+        <form method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Indiquer un nom</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Dupont" required>
+            </div>
+            <div class="mb-3">
+                <label for="commentary" class="form-label">Indiquer le commentaire</label>
+                <textarea class="form-control" name="commentary" id="commentary" rows="3" maxlength="255" placeholder="Maximum 255 caractères" required></textarea>
+            </div>
+            <div  class="mb-3">
+                <label for="note" class="form-label">Indiquer la note</label>
+                <select class="form-select" name="note" id="note" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button type="submit" name="addOpinion" class="btn btn-lg my-5"> Valider </button>
+        </form>
+    </div>
+    </div>
 </div>
 
 <?php
