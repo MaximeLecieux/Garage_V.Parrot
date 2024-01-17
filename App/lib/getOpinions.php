@@ -2,7 +2,7 @@
 require_once('pdo.php');
 
 function getValidsOpinions(PDO $pdo){
-    $query = $pdo->prepare("SELECT commentary, note, name FROM Opinions WHERE status = 'valid';");
+    $query = $pdo->prepare("SELECT * FROM Opinions WHERE status = 'valid';");
     $query->execute();
     return $query->fetchAll();
 }
