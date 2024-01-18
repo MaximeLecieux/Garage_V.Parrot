@@ -12,7 +12,7 @@ require_once('App/lib/verifyUser.php');
             $_SESSION['user'] = ['email' => $user['email']];
             header('location: index.php');
         } else {
-            $errors[] = 'Email ou mot de passe incorrect';
+            $errors[] = 'Identifiant ou mot de passe incorrect';
         }
 
     }
