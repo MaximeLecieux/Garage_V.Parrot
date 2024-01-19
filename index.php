@@ -1,11 +1,12 @@
 <?php
 require_once('templates/header.php');
+require_once('config.php');
 
-require_once('App/lib/getServices.php');
 require_once('App/lib/getOpinions.php');
+require_once('App/lib/getServices.php');
 
-$services = getServices($pdo);
 $opinions = getValidsOpinions($pdo);
+$services = getServices($pdo);
 
 ?>
         <section class="position-relative first-section">
@@ -16,7 +17,7 @@ $opinions = getValidsOpinions($pdo);
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="#services">
             <div class="text-center">
                 <h2 class="m-5">Nos services</h2>
                 <div class="mb-5">
@@ -25,21 +26,9 @@ $opinions = getValidsOpinions($pdo);
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
-                    <?php foreach($services as $service) { //Services get from database?>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="<?=$service['img']?>" alt="<?=$service['name']?>">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center"><?=$service['name']?></h3>
-                                <p class="card-text">
-                                    <?=$service['description']?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php } ?>
+                    <?php foreach($services as $service){
+                        echo $service;
+                    } ?>
                 </div>
             </div>
         </section>
@@ -152,6 +141,8 @@ $opinions = getValidsOpinions($pdo);
                 <a class="btn btn-lg my-5" href="commentary.php">Laisser nous un commentaire</a>
             </div>
         </section>
+
+        <script src="App/script/getServices.js"></script>
 
 <?php
 require_once('templates/footer.php');
