@@ -26,9 +26,19 @@ $services = getServices($pdo);
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
-                    <?php foreach($services as $service){
-                        echo $service;
-                    } ?>
+                    <?php 
+                        if(count($services) > 0){
+                            foreach($services as $service){
+                            echo $service;
+                            }
+                        } else {
+                            echo '
+                                <div class="alert alert-danger">
+                                    <p>Aucun service disponible</p>
+                                </div>
+                            ';
+                        }
+                    ?>
                 </div>
             </div>
         </section>
