@@ -25,21 +25,19 @@ $opinions = getValidsOpinions($pdo);
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
-                    <?php foreach($services as $service) { //Services get from database?>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="<?=$service['img']?>" alt="<?=$service['name']?>">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center"><?=$service['name']?></h3>
-                                <p class="card-text">
-                                    <?=$service['description']?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php } ?>
+                    <?php 
+                        if(count($services) > 0){
+                            foreach($services as $service){
+                            echo $service;
+                            }
+                        } else {
+                            echo '
+                                <div class="alert alert-danger">
+                                    <p>Aucun service disponible</p>
+                                </div>
+                            ';
+                        }
+                    ?>
                 </div>
             </div>
         </section>

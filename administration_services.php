@@ -28,7 +28,7 @@ $services = getServices($pdo);
         </div>
 
         <div class="m-5">
-            <a class="btn btn-primary" href="#">Ajouter un nouveau service</a>
+            <a class="btn btn-primary" href="admin_addService.php">Ajouter un nouveau service</a>
             <a class="btn btn-warning" href="#">Modifier un service existant</a>
             <a class="btn btn-danger" href="#">Supprimer un service</a>
         </div>

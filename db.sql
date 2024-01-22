@@ -81,11 +81,11 @@ GRANT SELECT, INSERT, DELETE, UPDATE ON garage.Contacts TO 'Administrateur'@'loc
  
 INSERT INTO Users (email, password, type) VALUES ('administrateur@garageparrot.fr', '$2y$10$6hRj1sncTTDtIEIhbfxYiOSzUMzS1SSiUcv6yFCXIzFq.hcgXSdKS', 'administrateur');
 
-INSERT INTO Services (name, description, img) VALUES ('Entretient du véhicule', "Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.", 'uploads/images/1.jpg');
+INSERT INTO Services (name, description, img) VALUES ('Entretient du véhicule', "Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.", '1.jpg');
 
-INSERT INTO Services (name, description, img) VALUES ('Service du nettoyage', "Notre équipe vous proportionne un service de qualité pour le nettoyage votre voiture.", 'uploads/images/2.jpg');
+INSERT INTO Services (name, description, img) VALUES ('Service du nettoyage', "Notre équipe vous proportionne un service de qualité pour le nettoyage votre voiture.", '2.jpg');
 
-INSERT INTO Services (name, description, img) VALUES ('Contrôle technique', "Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture. ", 'uploads/images/3.jpg');
+INSERT INTO Services (name, description, img) VALUES ('Contrôle technique', "Notre équipe vous proportionne un service de qualité pour le contrôle technique de votre voiture. ", '3.jpg');
 
 INSERT INTO Opinions (commentary, note, status, name)  VALUES ("De loin les meilleurs ! Service qualité prix au top ne changez rien ! Je recommande !!", 5, 'valid', 'LECIEUX');
 
