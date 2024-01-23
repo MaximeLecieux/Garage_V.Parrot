@@ -38,7 +38,7 @@ if(isset($_POST['addUser'])){
             <form method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="email" class="form-label">Indiquer une adresse mail</label>
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="email" class="form-control" name="email" placeholder="utilisateur@garagevparrot.fr" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Indiquer un mot de passe</label>

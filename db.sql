@@ -79,7 +79,7 @@ GRANT SELECT, INSERT, DELETE, UPDATE ON garage.Opinions TO 'Administrateur'@'loc
 GRANT SELECT, INSERT, DELETE, UPDATE ON garage.Cars TO 'Administrateur'@'localhost';
 GRANT SELECT, INSERT, DELETE, UPDATE ON garage.Contacts TO 'Administrateur'@'localhost';
  
-INSERT INTO Users (email, password, type) VALUES ('administrateur@garageparrot.fr', '$2y$10$6hRj1sncTTDtIEIhbfxYiOSzUMzS1SSiUcv6yFCXIzFq.hcgXSdKS', 'administrateur');
+INSERT INTO Users (email, password, type) VALUES ('administrateur@garagevparrot.fr', '$2y$10$6hRj1sncTTDtIEIhbfxYiOSzUMzS1SSiUcv6yFCXIzFq.hcgXSdKS', 'administrateur');
 
 INSERT INTO Services (name, description, img) VALUES ('Entretient du véhicule', "Notre équipe vous proportionne un service de qualité pour l'entretient de votre voiture.", '1.jpg');
 
