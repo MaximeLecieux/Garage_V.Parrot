@@ -1,12 +1,9 @@
 <?php
 require_once('templates/header.php');
-require_once('config.php');
 
 require_once('App/lib/getOpinions.php');
-require_once('App/lib/getServices.php');
 
 $opinions = getValidsOpinions($pdo);
-$services = getServices($pdo);
 
 ?>
         <section class="position-relative first-section">
@@ -25,20 +22,8 @@ $services = getServices($pdo);
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
                     </p>
                 </div>
-                <div class="row justify-content-center m-0">
-                    <?php 
-                        if(count($services) > 0){
-                            foreach($services as $service){
-                            echo $service;
-                            }
-                        } else {
-                            echo '
-                                <div class="alert alert-danger">
-                                    <p>Aucun service disponible</p>
-                                </div>
-                            ';
-                        }
-                    ?>
+                <div class="row justify-content-center m-0 services">
+                        <!-- Each services is display by getServices.js -->
                 </div>
             </div>
         </section>

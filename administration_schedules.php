@@ -16,7 +16,7 @@ require_once('templates/header.php');
                 <div class="mb-3">
                     <label for="day" class="form-label">Jour</label>
                     <select name="day" id="day" class="form-select">
-                        <option selected>Veuillez choisir un jour</option>
+                        <option selected disabled>Veuillez choisir un jour</option>
                         <!-- Option is genered by getShedule.js -->
                     </select>
                 </div>
