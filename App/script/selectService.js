@@ -1,8 +1,8 @@
 $("#idService").on("change", function(){
-    modifyService()   
+    selectService()   
 })
 
-function modifyService(){
+function selectService(){
     let form = new FormData()
     form.append('idService', $('#idService').val())
 

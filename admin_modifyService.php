@@ -79,7 +79,7 @@ if(isset($_POST['modifyService'])){
     </div>
 </div>
 
-<script src="App/script/modifyService.js"></script>
+<script src="App/script/selectService.js"></script>
 
 <script src="App/script/getServices.js"></script>
 
