@@ -1,3 +1,11 @@
+<?php
+require_once('App/lib/session.php');
+require_once('App/lib/setNavbar.php');
+
+$navbar = setNavbar($_SESSION['role']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,15 +32,20 @@
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
-                                <li class="nav-item m-2"><a href="index.php#services">Services</a></li>
-                                <li class="nav-item m-2"><a href="#schedules">Horaires</a></li>
-                                <li class="nav-item m-2"><a href="#">Véhicules</a></li>
-                                <li class="nav-item m-2"><a href="connexion.php">Connexion</a></li>
-                            </ul>
-                        </div>
+                            <?php if(isset($_SESSION['user'])){ 
+                                    echo $navbar;
+                                 } else { ?>
+                                    <!-- Default navbar if no session is active  -->
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                            <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
+                                            <li class="nav-item m-2"><a href="index.php#services">Services</a></li>
+                                            <li class="nav-item m-2"><a href="#schedules">Horaires</a></li>
+                                            <li class="nav-item m-2"><a href="#">Véhicules</a></li>
+                                            <li class="nav-item m-2"><a href="connexion.php">Connexion</a></li>
+                                        </ul>
+                                    </div>
+                            <?php } ?>
                     </div>
                 </div>
             </nav>

@@ -7,9 +7,11 @@ require_once('App/lib/verifyUser.php');
     if (isset($_POST['loginUser'])) {
 
         $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
+        
 
         if ($user) {
             $_SESSION['user'] = ['email' => $user['email']];
+            $_SESSION['role'] = ['role' => $user['type']];
             header('location: index.php');
         } else {
             $errors[] = 'Identifiant ou mot de passe incorrect';
