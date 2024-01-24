@@ -6,13 +6,18 @@ $errors = [];
 $messages = [];
 
 if(isset($_POST['deleteService'])){
-    $res = deleteService($pdo, $_POST['idService']);
+    if($_POST['idService'] != null){
+        $res = deleteService($pdo, $_POST['idService']);
 
-    if($res){
-        $messages[] = 'Le service a bien été supprimé';
+        if($res){
+            $messages[] = 'Le service a bien été supprimé';
+        } else {
+            $errors[] = 'Une erreur s\'est produite';
+        }
     } else {
-        $errors[] = 'Une erreur s\'est produite';
+        $errors[] = 'Veuillez sélectionner un service';
     }
+
 }
 
 ?>

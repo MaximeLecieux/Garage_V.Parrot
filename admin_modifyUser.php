@@ -37,7 +37,7 @@ if(isset($_POST['modifyUser'])){
 
     </div>
 
-    <h2 class="m-5">Modifier un service</h2>
+    <h2 class="m-5">Modifier un utilisateur</h2>
 
     <div class="administration-panel m-4">
         <div class="row justify-content-center m-0">
