@@ -35,7 +35,7 @@ if(isset($_POST['addUser'])){
 
     <div class="administration-panel m-4">
         <div class="row justify-content-center m-0">
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST">
                 <div class="mb-3">
                     <label for="email" class="form-label">Indiquer une adresse mail</label>
                     <input type="email" class="form-control" name="email" placeholder="utilisateur@garagevparrot.fr" required>
@@ -50,7 +50,7 @@ if(isset($_POST['addUser'])){
                 <div  class="mb-3">
                     <label for="role" class="form-label">Sélectionner un rôle</label>
                     <select class="form-select" name="role" required>
-                        <option selected disabled>Sélectionner un rôle</option>
+
                         <option value="administrateur">Administrateur</option>
                         <option value="employé">Employé</option>
                     </select>
