@@ -8,14 +8,13 @@ $messages = [];
 if(isset($_POST['modifyUser'])){
     if($_POST['idUser'] != null){
         $res = modifyUser($pdo, $_POST['idUser'], $_POST['email'], $_POST['modifyPassword'], $_POST['role']);
+        if($res){
+            $messages[] = 'L\'utilisateur a bien été modifié';
+        } else {
+            $errors[] = 'Une erreur s\'est produite';
+        }
     } else {
         $errors[] = 'Veuillez sélectionner un utilisateur';
-    }
-
-    if($res){
-        $messages[] = 'L\'utilisateur a bien été modifié';
-    } else {
-        $errors[] = 'Une erreur s\'est produite';
     }
 }
 

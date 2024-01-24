@@ -6,28 +6,33 @@ $errors = [];
 $messages = [];
 
 if(isset($_POST['modifyService'])){
-    $fileName = null;
-    if(isset($_FILES['img']['tmp_name']) && $_FILES['img']['tmp_name'] != ''){
-        $checkImage = getimagesize($_FILES['img']['tmp_name']);
-        if($checkImage !== false){
-            $fileName = uniqid().'-'.$_FILES['img']['name'];
-            move_uploaded_file($_FILES['img']['tmp_name'], 'uploads/images/services/'.$fileName);
+    if($_POST['idService'] != null) {
+        $fileName = null;
+        if(isset($_FILES['img']['tmp_name']) && $_FILES['img']['tmp_name'] != ''){
+            $checkImage = getimagesize($_FILES['img']['tmp_name']);
+            if($checkImage !== false){
+                $fileName = uniqid().'-'.$_FILES['img']['name'];
+                move_uploaded_file($_FILES['img']['tmp_name'], 'uploads/images/services/'.$fileName);
+            } else {
+                $errors[] = 'Le fichier doit être une image';
+            }
         } else {
-            $errors[] = 'Le fichier doit être une image';
+            $res = modifyService($pdo, $_POST['idService'], $_POST['title'], $_POST['description'], $fileName);
         }
+    
+        if(!$errors){
+            $res = modifyService($pdo, $_POST['idService'], $_POST['title'], $_POST['description'], $fileName);
+    
+            if($res){
+                $messages[] = 'Le service a bien été modifié';
+            } else {
+                $errors[] = 'Une erreur s\'est produite';
+            }
+        } 
     } else {
-        $res = modifyService($pdo, $_POST['idService'], $_POST['title'], $_POST['description'], $fileName);
+        $errors[] = 'Veuillez sélectionner un service';
     }
 
-    if(!$errors){
-        $res = modifyService($pdo, $_POST['idService'], $_POST['title'], $_POST['description'], $fileName);
-
-        if($res){
-            $messages[] = 'Le service a bien été modifié';
-        } else {
-            $errors[] = 'Une erreur s\'est produite';
-        }
-    }
 
 }
 
