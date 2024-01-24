@@ -57,7 +57,7 @@ if(isset($_POST['modifyService'])){
         <div class="row justify-content-center m-0">
             <form method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="service" class="form-label">Service</label>
+                    <label for="idService" class="form-label">Service</label>
                     <select class="form-select" id="idService" name="idService">
                         <option selected disabled>Veuillez choisir un service</option>
                        <!-- Options is genereted by getServices.js -->

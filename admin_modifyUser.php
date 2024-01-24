@@ -71,7 +71,7 @@ if(isset($_POST['modifyUser'])){
             </form>
         </div>
         <div class="m-5">
-            <a class="btn btn-primary" href="administration_users.php">Revenir à la page d'administration des comptes</a>
+            <a class="btn btn-primary" href="administration_users.php">Revenir à la page d'administration des utilisateurs</a>
         </div>
     </div>
 </div>
