@@ -19,6 +19,9 @@ function setNavbar($role){
                     <li class="nav-item m-2 d-flex align-items-center">
                         <a href="administration_commentary.php">Commentaires</a>
                     </li>
+                    <li class="nav-item m-2 d-flex align-items-center">
+                        <a href="exposition_cars.php">Exposition véhicules</a>
+                    </li>
                     <li class="nav-item m-2">
                         <div class="dropdown-center ml-1">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

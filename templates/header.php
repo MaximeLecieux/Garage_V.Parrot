@@ -41,7 +41,7 @@ $navbar = setNavbar($_SESSION['role']);
                                             <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
                                             <li class="nav-item m-2"><a href="index.php#services">Services</a></li>
                                             <li class="nav-item m-2"><a href="#schedules">Horaires</a></li>
-                                            <li class="nav-item m-2"><a href="#">Véhicules</a></li>
+                                            <li class="nav-item m-2"><a href="exposition_cars.php">Véhicules</a></li>
                                             <li class="nav-item m-2"><a href="connexion.php">Connexion</a></li>
                                         </ul>
                                     </div>
