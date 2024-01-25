@@ -2,8 +2,10 @@
 require_once('templates/header.php');
 
 require_once('App/lib/getOpinions.php');
+require_once('App/lib/getCars.php');
 
 $opinions = getValidsOpinions($pdo);
+$cars = getCarsLimit($pdo);
 
 ?>
         <section class="position-relative first-section">
@@ -36,57 +38,36 @@ $opinions = getValidsOpinions($pdo);
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/mercedes.jpg" alt="Changement de pneu">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center">Véhicule 1</h3>
-                                <p class="card-text">Model</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Année de mise en circulation</li>
-                                    <li class="list-group-item">Kilométrage</li>
-                                    <li class="list-group-item">Prix</li>
-                                </ul>
-                                <a href="#" class="btn mt-2">Détails</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/ferrari.jpg" alt="Changement de pneu">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center">Véhicule 2</h3>
-                                <p class="card-text">Model</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Année de mise en circulation</li>
-                                    <li class="list-group-item">Kilométrage</li>
-                                    <li class="list-group-item">Prix</li>
-                                </ul>
-                                <a href="#" class="btn mt-2">Détails</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mx-2 my-2">
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-img-top img-service" src="uploads/images/audi.jpg" alt="Changement de pneu">
-                            </div>
-                            <div class="card-body ">
-                                <h3 class="card-title center">Véhicule 3</h3>
-                                <p class="card-text">Model</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Année de mise en circulation</li>
-                                    <li class="list-group-item">Kilométrage</li>
-                                    <li class="list-group-item">Prix</li>
-                                </ul>
-                                <a href="#" class="btn mt-2">Détails</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        if($cars > 0){
+                            foreach($cars as $element){ ?>
+                                <div class="col-lg-3 col-md-4 mx-2 my-2">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <img class="card-img-top img-service" src="uploads/images/cars/<?=$element['img_one']?>" alt="<?=$element['name']?>">
+                                        </div>
+                                        <div class="card-body ">
+                                            <h3 class="card-title center"><?=$element['name']?></h3>
+                                            <p class="card-text"><?=$element['model']?></p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><?=$element['year']?></li>
+                                                <li class="list-group-item"><?=$element['mileage']?> km</li>
+                                                <li class="list-group-item"><?=$element['price']?> €</li>
+                                            </ul>
+                                            <a href="#" class="btn mt-2">Détails</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    <?php
+                            }   
+                        } else { ?>
+    
+                                <div class="alert alert-danger text-center">
+                                    <p>Aucun véhicule n'est en vente pour le moment</p>
+                                </div>
+                    <?php           
+                        }
+                    ?>
                 </div>
                 <a class="btn btn-lg my-5" href="#">Voir toutes nos offres</a>
             </div>
