@@ -14,7 +14,7 @@ $opinions = getValidsOpinions($pdo);
                 </div>
             </div>
         </section>
-        <section id="#services">
+        <section id="services">
             <div class="text-center">
                 <h2 class="m-5">Nos services</h2>
                 <div class="mb-5">

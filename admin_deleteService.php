@@ -1,5 +1,13 @@
 <?php
 require_once('templates/header.php');
+if(!$_SESSION || isset($_SESSION['user'])){
+    if($_SESSION['role']['role'] != 'administrateur'){
+        echo '<div class="alert alert-danger text-center">
+                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
+              </div>
+        ';
+    } else {
+
 require_once('App/lib/deleteService.php');
 
 $errors = [];
@@ -62,4 +70,6 @@ if(isset($_POST['deleteService'])){
 
 <?php
 require_once('templates/footer.php');
+    }
+}
 ?>
