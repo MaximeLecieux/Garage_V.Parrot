@@ -1,5 +1,5 @@
 <footer class="py-3 my-4">
-            <div class="row text-center">
+            <div class="row text-center m-0">
                 <div class="col-lg-6" id="schedules">
                     <h2 class="m-5">Horaires d'ouvertures</h2>
                     <div>
