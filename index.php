@@ -2,7 +2,7 @@
 require_once('templates/header.php');
 
 require_once('App/lib/getOpinions.php');
-require_once('App/lib/getCars.php');
+require_once('App/lib/getCarsLimit.php');
 
 $opinions = getValidsOpinions($pdo);
 $cars = getCarsLimit($pdo);

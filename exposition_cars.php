@@ -104,8 +104,16 @@ $maxMileage = getMaxMileageCars($pdo);
             </div>
         </div>   
         <!-- END filter navbar -->
+
+        <div class="list-cars row justify-content-center m-0">
+
+        </div>
     </div>
+
 </section>
+
+<script src="App/script/getCars.js"></script>
+
 
 <?php
 require_once('templates/footer.php');
