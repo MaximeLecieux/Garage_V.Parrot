@@ -25,6 +25,19 @@ function setNavbar($role){
                     <li class="nav-item m-2">
                         <div class="dropdown-center ml-1">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Véhicules
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="administration_cars.php">Administration</a></li>
+                                <li><a class="dropdown-item" href="admin_addCar.php">Ajouter un véhicule</a></li>
+                                <li><a class="dropdown-item" href="admin_modifyCar.php">Modifier un véhicule</a></li>
+                                <li><a class="dropdown-item" href="admin_deleteCar.php">Supprimer un véhicule</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item m-2">
+                        <div class="dropdown-center ml-1">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </button>
                             <ul class="dropdown-menu">
