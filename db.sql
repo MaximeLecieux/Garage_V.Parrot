@@ -53,12 +53,8 @@ CREATE TABLE Cars (
     nb_door INT NOT NULL,
     gearbox varchar(50) NOT NULL,
     fuel varchar(50) NOT NULL,
-    img_one varchar(255) NOT NULL,
-    img_two varchar(255),
-    img_three varchar(255),
-    img_four varchar(255),
-    img_five varchar(255),
-    img_six varchar(255)
+    first_img varchar(255) NOT NULL,
+    images_path varchar(255)
 );
 
 CREATE TABLE Contacts (
@@ -107,6 +103,6 @@ INSERT INTO Schedules (day, morning, afternoon) VALUES ('Vendredi', '8:00-12:00'
 INSERT INTO Schedules (day, morning, afternoon) VALUES ('Samedi', '8:00-12:00', 'Fermé');
 
 INSERT INTO Schedules (day, morning, afternoon) VALUES ('Dimanche', 'Fermé', 'Fermé');
-INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, img_one) VALUES ('Mercedes', '80000', 'Mercedes-Benz', 'Classe S Coupe' , '2020', '125000', 'Blanc', '2', 'Automatique', 'Hybride', 'mercedes.jpg');
-INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, img_one) VALUES ('Ferrari', '299000', 'Ferrari', '812-Superfast' , '2021', '110000', 'Rouge', '2', 'Automatique', 'Essence', 'ferrari.jpg');
-INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, img_one) VALUES ('Audi', '115000', 'Audi', 'A8' , '2023', '150000', 'Grise', '5', 'Automatique', 'Diesel', 'audi.jpg');
+INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, first_img) VALUES ('Mercedes', '80000', 'Mercedes-Benz', 'Classe S Coupe' , '2020', '125000', 'Blanc', '2', 'Automatique', 'Hybride', 'mercedes.jpg');
+INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, first_img) VALUES ('Ferrari', '299000', 'Ferrari', '812-Superfast' , '2021', '110000', 'Rouge', '2', 'Automatique', 'Essence', 'ferrari.jpg');
+INSERT INTO Cars (name, price, brand, model, year, mileage, color, nb_door, gearbox, fuel, first_img) VALUES ('Audi', '115000', 'Audi', 'A8' , '2023', '150000', 'Grise', '5', 'Automatique', 'Diesel', 'audi.jpg');

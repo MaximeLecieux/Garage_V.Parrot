@@ -44,7 +44,7 @@ $cars = getCarsLimit($pdo);
                                 <div class="col-lg-3 col-md-4 mx-2 my-2">
                                     <div class="card">
                                         <div class="card-header">
-                                            <img class="card-img-top img-service" src="uploads/images/cars/<?=$element['img_one']?>" alt="<?=$element['name']?>">
+                                            <img class="card-img-top img-service" src="uploads/images/cars/<?=$element['first_img']?>" alt="<?=$element['name']?>">
                                         </div>
                                         <div class="card-body ">
                                             <h3 class="card-title center"><?=$element['name']?></h3>
@@ -69,7 +69,7 @@ $cars = getCarsLimit($pdo);
                         }
                     ?>
                 </div>
-                <a class="btn btn-lg my-5" href="#">Voir toutes nos offres</a>
+                <a class="btn btn-lg my-5" href="exposition_cars.php">Voir toutes nos offres</a>
             </div>
         </section>
         <section>
