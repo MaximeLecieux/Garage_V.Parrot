@@ -1,12 +1,6 @@
 <?php
 require_once('templates/header.php');
 if(!$_SESSION || isset($_SESSION['user'])){
-    if($_SESSION['role']['role'] != 'administrateur'){
-        echo '<div class="alert alert-danger text-center">
-                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
-              </div>
-        ';
-    } else {
 
 require_once('App/lib/addService.php');
 require_once('App/lib/addCar.php');
@@ -126,7 +120,7 @@ if(isset($_POST['addCar'])){
             </form>
         </div>
         <div class="m-5">
-            <a class="btn btn-primary" href="administration_services.php">Revenir à la page d'administration des services</a>
+            <a class="btn btn-primary" href="administration_cars.php">Revenir à la page d'administration des services</a>
         </div>
     </div>
 </div>
@@ -135,6 +129,11 @@ if(isset($_POST['addCar'])){
 <?php
 require_once('templates/footer.php');
 
+    } else {
+        echo '<div class="alert alert-danger text-center">
+                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
+              </div>
+        ';
     }
-}
+
 ?>

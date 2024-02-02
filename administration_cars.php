@@ -1,12 +1,7 @@
 <?php
 require_once('templates/header.php');
 if(!$_SESSION || isset($_SESSION['user'])){
-    if($_SESSION['role']['role'] != 'administrateur'){
-        echo '<div class="alert alert-danger text-center">
-                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
-              </div>
-        ';
-    } else {
+
 
 ?>
 <div class="text-center">
@@ -35,6 +30,11 @@ if(!$_SESSION || isset($_SESSION['user'])){
 
 <?php
 require_once('templates/footer.php');
+    } else {
+        echo '<div class="alert alert-danger text-center">
+                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
+              </div>
+        ';
     }
-}
+
 ?>

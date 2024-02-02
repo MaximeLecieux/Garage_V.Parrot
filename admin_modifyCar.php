@@ -1,12 +1,6 @@
 <?php
 require_once('templates/header.php');
 if(!$_SESSION || isset($_SESSION['user'])){
-    if($_SESSION['role']['role'] != 'administrateur'){
-        echo '<div class="alert alert-danger text-center">
-                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
-              </div>
-        ';
-    } else {
 
 require_once('App/lib/modifyCar.php');
 
@@ -36,7 +30,7 @@ if(isset($_POST['modifyCar'])){
             $errors[] = 'Une erreur s\'est produite';
         }
     } else {
-        $errors[] = 'Veuillez sélectionner un service';
+        $errors[] = 'Veuillez sélectionner un véhicule';
     }
 }
 
@@ -61,7 +55,7 @@ if(isset($_POST['modifyCar'])){
         <div class="row justify-content-center m-0">
             <form method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="idCar" class="form-label">Service</label>
+                    <label for="idCar" class="form-label">Véhicule</label>
                     <select class="form-select" id="idCar" name="idCar">
                         <option selected disabled>Veuillez choisir un véhicule</option>
                        <!-- Options is genereted by getCars.js -->
@@ -136,7 +130,7 @@ if(isset($_POST['modifyCar'])){
             </form>
         </div>
         <div class="m-5">
-            <a class="btn btn-primary" href="administration_services.php">Revenir à la page d'administration des services</a>
+            <a class="btn btn-primary" href="administration_cars.php">Revenir à la page d'administration des services</a>
         </div>
     </div>
 </div>
@@ -148,6 +142,11 @@ if(isset($_POST['modifyCar'])){
 <?php
 require_once('templates/footer.php');
 
+    } else {
+        echo '<div class="alert alert-danger text-center">
+                <p>Vous n\'avez pas l\'autorisation d\'accéder à cette page</p>
+              </div>
+        ';
     }
-}
+
 ?>
