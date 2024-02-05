@@ -54,7 +54,7 @@ $cars = getCarsLimit($pdo);
                                                 <li class="list-group-item"><?=$element['mileage']?> km</li>
                                                 <li class="list-group-item"><?=$element['price']?> €</li>
                                             </ul>
-                                            <a href="#" class="btn mt-2">Détails</a>
+                                            <a href="car.php?idCar=<?=$element['idCar']?>" class="btn mt-2">Détails</a>
                                         </div>
                                     </div>
                                 </div>

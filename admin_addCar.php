@@ -15,12 +15,12 @@ if(isset($_POST['addCar'])){
     }
     if(isset($_FILES['multiple_image']['tmp_name'])){
         for($i=0; $i<count($_FILES['multiple_image']['name']); $i++){
-            $fileName = uniqid().'-'.$_FILES['multiple_image']['name'][$i];
-            move_uploaded_file($_FILES['multiple_image']['tmp_name'][$i], 'uploads/images/cars/'.$fileName);
+            move_uploaded_file($_FILES['multiple_image']['tmp_name'][$i], 'uploads/images/cars/'.$_FILES['multiple_image']['name'][$i]);
         }
     }
     
     $images = implode(', ', $_FILES['multiple_image']['name']);
+    
 
     $res = addCar($pdo, $_POST['name'], $_POST['price'], $_POST['brand'], $_POST['model'], $_POST['year'], $_POST['mileage'], $_POST['color'], $_POST['nb_door'], $_POST['gearbox'], $_POST['fuel'], $firstImage, $images);
     
