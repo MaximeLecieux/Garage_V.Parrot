@@ -24,7 +24,7 @@
             </div>
             <ul class="nav justify-content-center border-bottom py-3 my-3">
                 <li class="nav-item m-2"><a href="index.php">Accueil</a></li>
-                <li class="nav-item m-2"><a href="#">Véhicules</a></li>
+                <li class="nav-item m-2"><a href="exposition_cars.php">Véhicules</a></li>
                 <li class="nav-item m-2"><a href="connexion.php">Connexion</a></li>
             </ul>
             <p class="text-center text-body-secondary">© 2024 Garage V.Parrot, Inc</p>

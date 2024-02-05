@@ -12,7 +12,7 @@ $cars = getCarsLimit($pdo);
             <div class="px-4 py-5 text-center position-absolute top-50 start-50 translate-middle text-white">
                 <h1 class="display-5 fw-bold">Garage V.Parrot</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <p class="lead mb-4">Bonjour et bienvenu sur le site du garage de Vincent Parrot. Polyvalents, nos garagistes mécaniciens sont qualifiés et compétents pour intervenir sur n’importe quel type et marque de véhicule. N'hésitez pas à nous contacter ! </p>
                 </div>
             </div>
         </section>
@@ -21,7 +21,7 @@ $cars = getCarsLimit($pdo);
                 <h2 class="m-5">Nos services</h2>
                 <div class="mb-5">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
+                    Fort de nos 15 années d'expérience dans la réparation automobile, nous vous proposons une large gamme de services pour garantir les performances et la sécurité de vos véhicules.
                     </p>
                 </div>
                 <div class="row justify-content-center m-0 services">
@@ -34,7 +34,7 @@ $cars = getCarsLimit($pdo);
                 <h2 class="m-5">Nos voitures d'occasion</h2>
                 <div class="mb-5">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
+                        Nous mettons également en vente des voitures d'occasion de bonnes qualités, n'hésitez pas à farfouiller notre catalogue !
                     </p>
                 </div>
                 <div class="row justify-content-center m-0">
@@ -92,7 +92,7 @@ $cars = getCarsLimit($pdo);
                                 </div>
                             </div>
                             <div>
-                                <p>Ceci est un commentaire positif</p>
+                                <p>Excellent service, accueil parfait.</p>
                             </div>
                         </div>
                         <?php foreach($opinions as $opinion) { //Opinions get from database?>

@@ -22,11 +22,6 @@ $maxMileage = getMaxMileageCars($pdo);
 <section>
     <div class="text-center">
         <h2 class="m-5">Nos véhicules d'occasion</h2>
-        <div class="mb-5">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid praesentium! Ut, nesciunt harum debitis aspernatur voluptate animi nam vero exercitationem, voluptatibus possimus distinctio quasi neque nemo iusto qui provident.
-            </p>
-        </div>
         <!-- Filter navbar -->
         <div class="m-0">
             <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Filtres</button>
