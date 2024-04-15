@@ -31,40 +31,35 @@ $maxMileage = getMaxMileageCars($pdo);
                     <h5 class="offcanvas-title" id="offcanvasTopLabel">Filtres</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasTop" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <div class="row m-0 justify-content-center">
+                <div class="offcanvas-body justify-content-center text-center">
+                    <div class="row m-0">
                         <div class="col-lg-3 col-md-4 mx-2 my-2 wrapper p-3">
                             <div class="header-filter">
                                 <h4>Prix</h4>
+                                <span id="priceSelect"></span>
                             </div>
-                            <div class="filter-input">
-                                <div class="field">
-                                    <span>Min</span>
-                                    <input type="number" class="input-min" value="<?=$minPrice[0]?>">
+                            <div>
+                                <input type="range" class="form-range" min="<?=$minPrice[0]?>" max="<?=$maxPrice[0]?>" id="price">
+                                <div class="d-flex justify-content-between">
+                                    <span id="minPriceCar"><?=$minPrice[0]?></span>
+                                    <span id="maxPriceCar"><?=$maxPrice[0]?></span>
                                 </div>
-                                <div class="separator">-</div>
-                                <div class="field">
-                                    <span>Max</span>
-                                    <input type="number" class="input-max" value="<?=$maxPrice[0]?>">
-                                </div>
+                            
                             </div>
                             <div class="mt-3">
-                                <button type="button" class="btn">Réinitialiser</button>
+                                <button type="button" class="btn" id="buttonPrice">Réinitialiser</button>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 mx-2 my-2 wrapper p-3">
                             <div class="header-filter">
                                 <h4>Année</h4>
+                                <span id="yearSelect"></span>
                             </div>
-                            <div class="filter-input">
-                                <div class="field">
-                                    <span>Min</span>
-                                    <input type="number" class="input-min" value="<?=$minYear[0]?>">
-                                </div>
-                                <div class="separator">-</div>
-                                <div class="field">
-                                    <span>Max</span>
-                                    <input type="number" class="input-max" value="<?=$maxYear[0]?>">
+                            <div>
+                                <input type="range" class="form-range" min="<?=$minYear[0]?>" max="<?=$maxYear[0]?>" id="year">
+                                <div class="d-flex justify-content-between">
+                                    <span id="minYearCar"><?=$minYear[0]?></span>
+                                    <span id="maxYearCar"><?=$maxYear[0]?></span>
                                 </div>
                             </div>
                             <div class="mt-3">
@@ -74,16 +69,13 @@ $maxMileage = getMaxMileageCars($pdo);
                         <div class="col-lg-3 col-md-4 mx-2 my-2 wrapper p-3">
                             <div class="header-filter">
                                 <h4>Kilomètres</h4>
+                                <span id="mileageSelect"></span>
                             </div>
-                            <div class="filter-input">
-                                <div class="field">
-                                    <span>Min</span>
-                                    <input type="number" class="input-min" value="<?=$minMileage[0]?>">
-                                </div>
-                                <div class="separator">-</div>
-                                <div class="field">
-                                    <span>Max</span>
-                                    <input type="number" class="input-max" value="<?=$maxMileage[0]?>">
+                            <div>
+                                <input type="range" class="form-range" min="<?=$minMileage[0]?>" max="<?=$maxMileage[0]?>" id="mileage">
+                                <div class="d-flex justify-content-between">
+                                    <span id="minMileageCar"><?=$minMileage[0]?></span>
+                                    <span id="maxMileageCar"><?=$maxMileage[0]?></span>
                                 </div>
                             </div>
                             <div class="mt-3">
@@ -108,7 +100,7 @@ $maxMileage = getMaxMileageCars($pdo);
 </section>
 
 <script src="App/script/getCars.js"></script>
-
+<script src="App/script/filterCars.js"></script>
 
 <?php
 require_once('templates/footer.php');
